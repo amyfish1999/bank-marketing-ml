@@ -1,0 +1,31 @@
+{
+  "class_counts": [
+    7308,
+    928
+  ],
+  "draw_order": "class 0 choices then class 1 choices; exact same draw for every scenario",
+  "fit_count_after_bootstrap": 194,
+  "interval_rows": 108,
+  "metric_rows": 8000,
+  "no_fit_predict_transform_calls": true,
+  "paired_scenarios": [
+    "P1",
+    "S1",
+    "B1",
+    "B2"
+  ],
+  "rules": {
+    "paired": true,
+    "percentiles": [
+      2.5,
+      97.5
+    ],
+    "quantile_method": "linear",
+    "replicates": 2000,
+    "rng": "NumPy default_rng / PCG64",
+    "seed": 42,
+    "stratified": true
+  },
+  "seconds": 80.36426845699998,
+  "tie_rule": "descending probability; ascending immutable cleaned-row position; bootstrap duplicate draw-occurrence last"
+}

@@ -1,0 +1,5 @@
+scenario,role,group,selected_parameters,CV_AP_selection_only,seconds
+P1,Sole Primary,Full,"{""classifier__l2_regularization"": 1.0, ""classifier__learning_rate"": 0.05, ""classifier__max_iter"": 200, ""classifier__max_leaf_nodes"": 15}",0.44806889182064219,100.5910318819997
+S1,Secondary Sensitivity,Customer Attributes Only,"{""classifier__l2_regularization"": 0.0, ""classifier__learning_rate"": 0.05, ""classifier__max_iter"": 100, ""classifier__max_leaf_nodes"": 15}",0.23378501837210189,85.355145750000247
+B1,Secondary Benchmark,Full,"{""classifier__C"": 0.1}",0.42242940278107011,2.0795003879998148
+B2,Secondary Benchmark,Customer Attributes Only,"{""classifier__C"": 0.1}",0.20225074761647463,1.7384020919998875

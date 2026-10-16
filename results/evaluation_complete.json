@@ -1,0 +1,50 @@
+{
+  "completed_at_utc": "2026-10-16T01:53:42.095700+00:00",
+  "execution_code_sha256": "eb82e4b5d6cfde38df114adde5ba3702e2fda70786cf9f1ea72abdec7293764e",
+  "gate_sha256": "b12f5252aef6794c635a041506a01ae388b141e9f91973afb612d155bb07ba89",
+  "heldout_probability_calls": {
+    "B1": 1,
+    "B2": 1,
+    "P1": 1,
+    "S1": 1
+  },
+  "interpretation": "conditional historical academic evaluation; all 15 features Provisional; no causal or deployment claim",
+  "manifest_sha256": "84aad6db0ad97b619fdf27c4e6fccdef3263ac65c178ca4f9898a0b0b773d96a",
+  "model_fits": 194,
+  "primary_scenario": "P1",
+  "result_hashes": {
+    "results/bootstrap_draw_digests.csv": "f480967706d1d49df0dd8265bb573e874ad52c449b3375e15c40507c83095fd6",
+    "results/bootstrap_intervals.csv": "a180a06e3633dc1eb6e5f1aeec19321d2381f18220b2a5095ebaf15f14800ee5",
+    "results/bootstrap_metadata.json": "270d992081671a51de056f6c5c9647ce5747983c33aa69e06efad245f610c5d9",
+    "results/bootstrap_replicate_metrics.csv.gz": "a9ca4917cae3c6dfe3362767d0d6d60c043b1f012b18059135756fc99d7cbfd5",
+    "results/development_cv_candidates.csv": "29d741fa87259fbdb1de4c9f210dbf0263f4e39d02d991f7943b32b022915961",
+    "results/development_fit_audit.json": "54932ac585562f894203077a249810d318fcf79949291b4244dd72383f8b9756",
+    "results/development_fixture_checks.json": "17648afdefd06e70962a551e1d40a8ce33f846e799b170aad2c0569fd08380a5",
+    "results/development_prediction_audit.json": "2c1b569459f446c83d0baba37a62b6c0cc69121b5b3c05e4b3f215246edeed4f",
+    "results/final_selected_parameters.csv": "753116478343c5054b3669979d52ece7d13013597b5a10b7328e2b30dbe05048",
+    "results/heldout_metrics.csv": "e75b81da314a3b182a7fa7f6da02e31483c123dcf5e1defaab53a7cc2eed5655",
+    "results/heldout_predictions.csv": "bc1e1163db21fae70c0b38ccaf77347b28de8487b2b71d64f17112069810f9d3",
+    "results/heldout_topk.csv": "a319e3041e42afe5e4440624aa8af26596a74e2408c54bfc8bc18e2d64df1068",
+    "results/phase7_events.jsonl": "fbfa57cf8ecad95c2cd87ebb628f60dc55f82afb68955d858d8f9a984d44af23",
+    "results/preprocessing_tests.txt": "e26f321f619ca3951ee48587779abd265596fdf7c679ff0241f3ccdc9474fe0d",
+    "results/release_gate.json": "d9a5faa9cd7cd47fd925f92c1ead26a2f2c1289e497ffd154c3fc6be3a64bc1d",
+    "results/test_access_started.json": "3d3d30564d80fd091df5790846b6dfc5c84dad16a5f778925962b0d8d032bb77",
+    "results/test_prediction_audit.json": "1a9b7a89ddfb92f0b84c77c05c7160ef60113d304744b611afa281da06cc8133"
+  },
+  "scenario_order": [
+    "P1",
+    "S1",
+    "B1",
+    "B2"
+  ],
+  "source_main": "9578ebc",
+  "test_parser_invocations": 1,
+  "versions": {
+    "joblib": "1.5.3",
+    "numpy": "2.3.5",
+    "pandas": "2.2.3",
+    "python": "3.12.14",
+    "scipy": "1.17.0",
+    "sklearn": "1.8.0"
+  }
+}

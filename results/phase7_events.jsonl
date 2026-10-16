@@ -1,0 +1,10 @@
+{"code_sha256": "eb82e4b5d6cfde38df114adde5ba3702e2fda70786cf9f1ea72abdec7293764e", "event": "authorization_recorded", "scope": "User Phase 7 instruction explicitly approves historical academic evaluation of P1/S1/B1/B2, locked capacities/metrics/bootstrap, and automatic Stage 2 continuation after PASS.", "source_main": "9578ebc", "utc": "2026-10-16T01:49:10.183019+00:00"}
+{"artifact_sha256": "384d477e2f6d8fbe4e4b365f6ee01a4b5f516321314152a06ab2bc93137cbeb4", "development_only": true, "event": "scenario_frozen", "scenario": "P1", "utc": "2026-10-16T01:50:52.230328+00:00"}
+{"artifact_sha256": "5b2bf7ade8179b227b544e8fe7071e6bd79d7191c6cc1f8de89d232197de1a66", "development_only": true, "event": "scenario_frozen", "scenario": "S1", "utc": "2026-10-16T01:52:17.585636+00:00"}
+{"artifact_sha256": "56624af57a04fef602190e30bd1ea4128be57abe8c24bf941e60c40815df04b8", "development_only": true, "event": "scenario_frozen", "scenario": "B1", "utc": "2026-10-16T01:52:19.665305+00:00"}
+{"artifact_sha256": "195739a70d959eb933d0fd0e5881b34a6bf654179a4483374f21fab95c1e228d", "development_only": true, "event": "scenario_frozen", "scenario": "B2", "utc": "2026-10-16T01:52:21.403859+00:00"}
+{"event": "release_gate_saved", "gate_sha256": "b12f5252aef6794c635a041506a01ae388b141e9f91973afb612d155bb07ba89", "manifest_sha256": "84aad6db0ad97b619fdf27c4e6fccdef3263ac65c178ca4f9898a0b0b773d96a", "status": "PASS", "utc": "2026-10-16T01:52:21.439568+00:00"}
+{"event": "held_out_access_started", "gate_sha256": "b12f5252aef6794c635a041506a01ae388b141e9f91973afb612d155bb07ba89", "utc": "2026-10-16T01:52:21.442563+00:00"}
+{"calls": {"B1": 1, "B2": 1, "P1": 1, "S1": 1}, "event": "all_four_probability_vectors_frozen", "prediction_sha256": "bc1e1163db21fae70c0b38ccaf77347b28de8487b2b71d64f17112069810f9d3", "utc": "2026-10-16T01:52:21.652832+00:00"}
+{"event": "predeclared_batch_metrics_saved", "primary": "P1", "scenario_count": 4, "utc": "2026-10-16T01:52:21.715639+00:00"}
+{"event": "bootstrap_and_evaluation_completed", "no_new_model_fits": true, "primary": "P1", "replicates": 2000, "utc": "2026-10-16T01:53:42.095519+00:00"}

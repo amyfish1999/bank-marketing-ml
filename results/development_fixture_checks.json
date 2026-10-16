@@ -1,0 +1,22 @@
+[
+  {
+    "group": "Full",
+    "model": "HistGradientBoosting",
+    "status": "PASS"
+  },
+  {
+    "group": "Customer Attributes Only",
+    "model": "HistGradientBoosting",
+    "status": "PASS"
+  },
+  {
+    "group": "Full",
+    "model": "LogisticRegression",
+    "status": "PASS"
+  },
+  {
+    "group": "Customer Attributes Only",
+    "model": "LogisticRegression",
+    "status": "PASS"
+  }
+]
