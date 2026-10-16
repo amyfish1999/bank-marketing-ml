@@ -1,0 +1,43 @@
+transformed_position,transformed_name,original_feature,display_name,coefficient,absolute_coefficient,interpretation_unit
+0,categorical__job_admin.,job,job=admin.,0.03820540127592971,0.03820540127592971,one encoded category indicator (valid substitution requires coefficient difference)
+1,categorical__job_blue-collar,job,job=blue-collar,-0.20458020870494822,0.20458020870494822,one encoded category indicator (valid substitution requires coefficient difference)
+2,categorical__job_entrepreneur,job,job=entrepreneur,-0.085703154591624822,0.085703154591624822,one encoded category indicator (valid substitution requires coefficient difference)
+3,categorical__job_housemaid,job,job=housemaid,-0.0088328651493225184,0.0088328651493225184,one encoded category indicator (valid substitution requires coefficient difference)
+4,categorical__job_management,job,job=management,-0.071393749023191899,0.071393749023191899,one encoded category indicator (valid substitution requires coefficient difference)
+5,categorical__job_retired,job,job=retired,0.34479429774667503,0.34479429774667503,one encoded category indicator (valid substitution requires coefficient difference)
+6,categorical__job_self-employed,job,job=self-employed,-0.021366532098019413,0.021366532098019413,one encoded category indicator (valid substitution requires coefficient difference)
+7,categorical__job_services,job,job=services,-0.16240192978381324,0.16240192978381324,one encoded category indicator (valid substitution requires coefficient difference)
+8,categorical__job_student,job,job=student,0.3177154426090627,0.3177154426090627,one encoded category indicator (valid substitution requires coefficient difference)
+9,categorical__job_technician,job,job=technician,0.029488055635241265,0.029488055635241265,one encoded category indicator (valid substitution requires coefficient difference)
+10,categorical__job_unemployed,job,job=unemployed,-0.080051092397722845,0.080051092397722845,one encoded category indicator (valid substitution requires coefficient difference)
+11,categorical__job_unknown,job,job=unknown,-0.12328828281995022,0.12328828281995022,one encoded category indicator (valid substitution requires coefficient difference)
+12,categorical__marital_divorced,marital,marital=divorced,-0.13393193809984114,0.13393193809984114,one encoded category indicator (valid substitution requires coefficient difference)
+13,categorical__marital_married,marital,marital=married,-0.048026169088449679,0.048026169088449679,one encoded category indicator (valid substitution requires coefficient difference)
+14,categorical__marital_single,marital,marital=single,0.053346449331722633,0.053346449331722633,one encoded category indicator (valid substitution requires coefficient difference)
+15,categorical__marital_unknown,marital,marital=unknown,0.10119704055485644,0.10119704055485644,one encoded category indicator (valid substitution requires coefficient difference)
+16,categorical__education_basic.4y,education,education=basic.4y,-0.078885991888822823,0.078885991888822823,one encoded category indicator (valid substitution requires coefficient difference)
+17,categorical__education_basic.6y,education,education=basic.6y,0.0070573277935128001,0.0070573277935128001,one encoded category indicator (valid substitution requires coefficient difference)
+18,categorical__education_basic.9y,education,education=basic.9y,-0.1858612319095411,0.1858612319095411,one encoded category indicator (valid substitution requires coefficient difference)
+19,categorical__education_high.school,education,education=high.school,-0.087961581446911366,0.087961581446911366,one encoded category indicator (valid substitution requires coefficient difference)
+20,categorical__education_illiterate,education,education=illiterate,0.27583325899443351,0.27583325899443351,one encoded category indicator (valid substitution requires coefficient difference)
+21,categorical__education_professional.course,education,education=professional.course,-0.065873673778499356,0.065873673778499356,one encoded category indicator (valid substitution requires coefficient difference)
+22,categorical__education_university.degree,education,education=university.degree,0.041784139810643744,0.041784139810643744,one encoded category indicator (valid substitution requires coefficient difference)
+23,categorical__education_unknown,education,education=unknown,0.066493135123514679,0.066493135123514679,one encoded category indicator (valid substitution requires coefficient difference)
+24,categorical__default_no,default,default=no,0.15557237344918784,0.15557237344918784,one encoded category indicator (valid substitution requires coefficient difference)
+25,categorical__default_unknown,default,default=unknown,-0.16639174298227671,0.16639174298227671,one encoded category indicator (valid substitution requires coefficient difference)
+26,categorical__default_yes,default,default=yes,-0.016595247768613357,0.016595247768613357,one encoded category indicator (valid substitution requires coefficient difference)
+27,categorical__housing_no,housing,housing=no,0.0084410116898039327,0.0084410116898039327,one encoded category indicator (valid substitution requires coefficient difference)
+28,categorical__housing_unknown,housing,housing=unknown,-0.011761630403927524,0.011761630403927524,one encoded category indicator (valid substitution requires coefficient difference)
+29,categorical__housing_yes,housing,housing=yes,-0.024093998587595884,0.024093998587595884,one encoded category indicator (valid substitution requires coefficient difference)
+30,categorical__loan_no,loan,loan=no,-0.0052139712859438428,0.0052139712859438428,one encoded category indicator (valid substitution requires coefficient difference)
+31,categorical__loan_unknown,loan,loan=unknown,-0.011761630403927524,0.011761630403927524,one encoded category indicator (valid substitution requires coefficient difference)
+32,categorical__loan_yes,loan,loan=yes,-0.01043901561183545,0.01043901561183545,one encoded category indicator (valid substitution requires coefficient difference)
+33,numerical__age,age,age,0.039465974772026846,0.039465974772026846,one training-fitted standard deviation; recency conditional on available
+34,numerical__previous,previous,previous,-0.11961492742693346,0.11961492742693346,one training-fitted standard deviation; recency conditional on available
+35,numerical__emp.var.rate,emp.var.rate,emp.var.rate,-0.64021974057969055,0.64021974057969055,one training-fitted standard deviation; recency conditional on available
+36,numerical__cons.price.idx,cons.price.idx,cons.price.idx,0.28570651208177189,0.28570651208177189,one training-fitted standard deviation; recency conditional on available
+37,numerical__cons.conf.idx,cons.conf.idx,cons.conf.idx,0.087985621207278833,0.087985621207278833,one training-fitted standard deviation; recency conditional on available
+38,numerical__euribor3m,euribor3m,euribor3m,0.022002125194274597,0.022002125194274597,one training-fitted standard deviation; recency conditional on available
+39,numerical__nr.employed,nr.employed,nr.employed,-0.3789304747826297,0.3789304747826297,one training-fitted standard deviation; recency conditional on available
+40,recency__recency_days,recency_days,recency_days,-0.15448368197551832,0.15448368197551832,one training-fitted standard deviation; recency conditional on available
+41,recency__recency_available,recency_available,recency_available,1.7373892624343996,1.7373892624343996,one unscaled binary indicator
