@@ -1,0 +1,782 @@
+{
+  "execution_code_sha256": "eb82e4b5d6cfde38df114adde5ba3702e2fda70786cf9f1ea72abdec7293764e",
+  "fit_counts": {
+    "CV": 190,
+    "final_development_refits": 4,
+    "total": 194
+  },
+  "fold_sha256": "6016ca88c4c344724075ade804828d47f03a69bf7337f5287cee0f4a444457c4",
+  "frozen_at_utc": "2026-10-16T01:52:21.404148+00:00",
+  "grids": {
+    "HistGradientBoosting": {
+      "classifier__l2_regularization": [
+        0.0,
+        1.0
+      ],
+      "classifier__learning_rate": [
+        0.05,
+        0.1
+      ],
+      "classifier__max_iter": [
+        100,
+        200
+      ],
+      "classifier__max_leaf_nodes": [
+        15,
+        31
+      ]
+    },
+    "LogisticRegression": {
+      "classifier__C": [
+        0.1,
+        1.0,
+        10.0
+      ]
+    }
+  },
+  "held_out_row_count_not_loaded": 8236,
+  "model_warnings": [],
+  "rules": {
+    "academic_only": true,
+    "all_15_features": "Provisional",
+    "authorization": "User Phase 7 instruction explicitly approves historical academic evaluation of P1/S1/B1/B2, locked capacities/metrics/bootstrap, and automatic Stage 2 continuation after PASS.",
+    "bootstrap": {
+      "paired": true,
+      "percentiles": [
+        2.5,
+        97.5
+      ],
+      "quantile_method": "linear",
+      "replicates": 2000,
+      "rng": "NumPy default_rng / PCG64",
+      "seed": 42,
+      "stratified": true
+    },
+    "calibration": null,
+    "capacities": [
+      0.05,
+      0.1,
+      0.2
+    ],
+    "class_weight": null,
+    "classification_threshold": 0.5,
+    "contact_counts": [
+      412,
+      824,
+      1648
+    ],
+    "cv": {
+      "n_splits": 5,
+      "random_state": 42,
+      "shuffle": true
+    },
+    "positive_class": 1,
+    "primary_capacity": 0.1,
+    "primary_metric": "AP",
+    "primary_scenario": "P1",
+    "ranking_ties": "descending probability; ascending immutable cleaned-row position; bootstrap duplicate draw-occurrence last",
+    "resampling": null,
+    "scenario_order": [
+      "P1",
+      "S1",
+      "B1",
+      "B2"
+    ],
+    "secondary_metric": "ROC_AUC",
+    "selection": "maximum mean five-fold positive-predict_proba AP; exact ties first ParameterGrid candidate",
+    "threshold_selection": null
+  },
+  "scenario_order": [
+    "P1",
+    "S1",
+    "B1",
+    "B2"
+  ],
+  "scenarios": {
+    "B1": {
+      "artifact": "models/B1_pipeline.joblib",
+      "artifact_sha256": "56624af57a04fef602190e30bd1ea4128be57abe8c24bf941e60c40815df04b8",
+      "classes": [
+        0,
+        1
+      ],
+      "classifier_configuration": {
+        "C": 0.1,
+        "class_weight": null,
+        "dual": false,
+        "fit_intercept": true,
+        "intercept_scaling": 1,
+        "l1_ratio": 0.0,
+        "max_iter": 1000,
+        "n_jobs": null,
+        "penalty": "deprecated",
+        "random_state": 42,
+        "solver": "lbfgs",
+        "tol": 0.0001,
+        "verbose": 0,
+        "warm_start": false
+      },
+      "development_fixture_rows": 256,
+      "features": [
+        "age",
+        "job",
+        "marital",
+        "education",
+        "default",
+        "housing",
+        "loan",
+        "previous",
+        "emp.var.rate",
+        "cons.price.idx",
+        "cons.conf.idx",
+        "euribor3m",
+        "nr.employed",
+        "recency_available",
+        "recency_days"
+      ],
+      "group": "Full",
+      "mean_CV_AP_selection_only": 0.4224294027810701,
+      "model": "LogisticRegression",
+      "preprocessing_configuration": {
+        "adapter": "exact Phase 6A subset_preprocessor",
+        "factory": "logistic_regression",
+        "numeric_scaling": "training-only StandardScaler",
+        "ohe": "full, drop=None, handle_unknown=ignore, dense float64",
+        "recency": "approved conditional scaler"
+      },
+      "preprocessing_sha256": "3959b4db9a561be5bf7373dfcf82ab85c24a288250e26180599a403b7e551ed8",
+      "preprocessing_statistics": {
+        "categories": [
+          [
+            "admin.",
+            "blue-collar",
+            "entrepreneur",
+            "housemaid",
+            "management",
+            "retired",
+            "self-employed",
+            "services",
+            "student",
+            "technician",
+            "unemployed",
+            "unknown"
+          ],
+          [
+            "divorced",
+            "married",
+            "single",
+            "unknown"
+          ],
+          [
+            "basic.4y",
+            "basic.6y",
+            "basic.9y",
+            "high.school",
+            "illiterate",
+            "professional.course",
+            "university.degree",
+            "unknown"
+          ],
+          [
+            "no",
+            "unknown",
+            "yes"
+          ],
+          [
+            "no",
+            "unknown",
+            "yes"
+          ],
+          [
+            "no",
+            "unknown",
+            "yes"
+          ]
+        ],
+        "feature_names": [
+          "categorical__job_admin.",
+          "categorical__job_blue-collar",
+          "categorical__job_entrepreneur",
+          "categorical__job_housemaid",
+          "categorical__job_management",
+          "categorical__job_retired",
+          "categorical__job_self-employed",
+          "categorical__job_services",
+          "categorical__job_student",
+          "categorical__job_technician",
+          "categorical__job_unemployed",
+          "categorical__job_unknown",
+          "categorical__marital_divorced",
+          "categorical__marital_married",
+          "categorical__marital_single",
+          "categorical__marital_unknown",
+          "categorical__education_basic.4y",
+          "categorical__education_basic.6y",
+          "categorical__education_basic.9y",
+          "categorical__education_high.school",
+          "categorical__education_illiterate",
+          "categorical__education_professional.course",
+          "categorical__education_university.degree",
+          "categorical__education_unknown",
+          "categorical__default_no",
+          "categorical__default_unknown",
+          "categorical__default_yes",
+          "categorical__housing_no",
+          "categorical__housing_unknown",
+          "categorical__housing_yes",
+          "categorical__loan_no",
+          "categorical__loan_unknown",
+          "categorical__loan_yes",
+          "numerical__age",
+          "numerical__previous",
+          "numerical__emp.var.rate",
+          "numerical__cons.price.idx",
+          "numerical__cons.conf.idx",
+          "numerical__euribor3m",
+          "numerical__nr.employed",
+          "recency__recency_days",
+          "recency__recency_available"
+        ],
+        "numeric": {
+          "mean": [
+            40.01712204007286,
+            0.17380085003035822,
+            0.08013357619914997,
+            93.57560749848209,
+            -40.50982392228294,
+            3.6180527625986643,
+            5166.905950212507
+          ],
+          "n_samples": 32940.0,
+          "scale": [
+            10.453186391854283,
+            0.49857082124822294,
+            1.571479251345487,
+            0.5794605953408394,
+            4.629001529515137,
+            1.7359041746919006,
+            72.39679347832252
+          ],
+          "variance": [
+            109.26910574284757,
+            0.24857286380012747,
+            2.469547037409372,
+            0.33577458155276,
+            21.42765516025348,
+            3.0133633037127687,
+            5241.295705942882
+          ]
+        },
+        "recency": {
+          "available_samples": 1207,
+          "mean": 6.085335542667772,
+          "scale": 3.916084398561551,
+          "variance": 15.335717016657183
+        }
+      },
+      "random_state": 42,
+      "reload_identical_probabilities": true,
+      "role": "Secondary Benchmark",
+      "scenario": "B1",
+      "seconds": 2.079500387999815,
+      "selected_parameters": {
+        "classifier__C": 0.1
+      },
+      "training_rows": 32940,
+      "training_sha256": "c1a19ca755279a5f22ba22e06b8d5ca22797d9b6351c69fe4cfafd2b47041d49"
+    },
+    "B2": {
+      "artifact": "models/B2_pipeline.joblib",
+      "artifact_sha256": "195739a70d959eb933d0fd0e5881b34a6bf654179a4483374f21fab95c1e228d",
+      "classes": [
+        0,
+        1
+      ],
+      "classifier_configuration": {
+        "C": 0.1,
+        "class_weight": null,
+        "dual": false,
+        "fit_intercept": true,
+        "intercept_scaling": 1,
+        "l1_ratio": 0.0,
+        "max_iter": 1000,
+        "n_jobs": null,
+        "penalty": "deprecated",
+        "random_state": 42,
+        "solver": "lbfgs",
+        "tol": 0.0001,
+        "verbose": 0,
+        "warm_start": false
+      },
+      "development_fixture_rows": 256,
+      "features": [
+        "age",
+        "job",
+        "marital",
+        "education",
+        "default",
+        "housing",
+        "loan"
+      ],
+      "group": "Customer Attributes Only",
+      "mean_CV_AP_selection_only": 0.20225074761647463,
+      "model": "LogisticRegression",
+      "preprocessing_configuration": {
+        "adapter": "exact Phase 6A subset_preprocessor",
+        "factory": "logistic_regression",
+        "numeric_scaling": "training-only StandardScaler",
+        "ohe": "full, drop=None, handle_unknown=ignore, dense float64",
+        "recency": "component completely removed"
+      },
+      "preprocessing_sha256": "3959b4db9a561be5bf7373dfcf82ab85c24a288250e26180599a403b7e551ed8",
+      "preprocessing_statistics": {
+        "categories": [
+          [
+            "admin.",
+            "blue-collar",
+            "entrepreneur",
+            "housemaid",
+            "management",
+            "retired",
+            "self-employed",
+            "services",
+            "student",
+            "technician",
+            "unemployed",
+            "unknown"
+          ],
+          [
+            "divorced",
+            "married",
+            "single",
+            "unknown"
+          ],
+          [
+            "basic.4y",
+            "basic.6y",
+            "basic.9y",
+            "high.school",
+            "illiterate",
+            "professional.course",
+            "university.degree",
+            "unknown"
+          ],
+          [
+            "no",
+            "unknown",
+            "yes"
+          ],
+          [
+            "no",
+            "unknown",
+            "yes"
+          ],
+          [
+            "no",
+            "unknown",
+            "yes"
+          ]
+        ],
+        "feature_names": [
+          "categorical__job_admin.",
+          "categorical__job_blue-collar",
+          "categorical__job_entrepreneur",
+          "categorical__job_housemaid",
+          "categorical__job_management",
+          "categorical__job_retired",
+          "categorical__job_self-employed",
+          "categorical__job_services",
+          "categorical__job_student",
+          "categorical__job_technician",
+          "categorical__job_unemployed",
+          "categorical__job_unknown",
+          "categorical__marital_divorced",
+          "categorical__marital_married",
+          "categorical__marital_single",
+          "categorical__marital_unknown",
+          "categorical__education_basic.4y",
+          "categorical__education_basic.6y",
+          "categorical__education_basic.9y",
+          "categorical__education_high.school",
+          "categorical__education_illiterate",
+          "categorical__education_professional.course",
+          "categorical__education_university.degree",
+          "categorical__education_unknown",
+          "categorical__default_no",
+          "categorical__default_unknown",
+          "categorical__default_yes",
+          "categorical__housing_no",
+          "categorical__housing_unknown",
+          "categorical__housing_yes",
+          "categorical__loan_no",
+          "categorical__loan_unknown",
+          "categorical__loan_yes",
+          "numerical__age"
+        ],
+        "numeric": {
+          "mean": [
+            40.01712204007286
+          ],
+          "n_samples": 32940.0,
+          "scale": [
+            10.453186391854283
+          ],
+          "variance": [
+            109.26910574284757
+          ]
+        }
+      },
+      "random_state": 42,
+      "reload_identical_probabilities": true,
+      "role": "Secondary Benchmark",
+      "scenario": "B2",
+      "seconds": 1.7384020919998875,
+      "selected_parameters": {
+        "classifier__C": 0.1
+      },
+      "training_rows": 32940,
+      "training_sha256": "c1a19ca755279a5f22ba22e06b8d5ca22797d9b6351c69fe4cfafd2b47041d49"
+    },
+    "P1": {
+      "artifact": "models/P1_pipeline.joblib",
+      "artifact_sha256": "384d477e2f6d8fbe4e4b365f6ee01a4b5f516321314152a06ab2bc93137cbeb4",
+      "classes": [
+        0,
+        1
+      ],
+      "classifier_configuration": {
+        "categorical_features": null,
+        "class_weight": null,
+        "early_stopping": false,
+        "interaction_cst": null,
+        "l2_regularization": 1.0,
+        "learning_rate": 0.05,
+        "loss": "log_loss",
+        "max_bins": 255,
+        "max_depth": null,
+        "max_features": 1.0,
+        "max_iter": 200,
+        "max_leaf_nodes": 15,
+        "min_samples_leaf": 20,
+        "monotonic_cst": null,
+        "n_iter_no_change": 10,
+        "random_state": 42,
+        "scoring": "loss",
+        "tol": 1e-07,
+        "validation_fraction": 0.1,
+        "verbose": 0,
+        "warm_start": false
+      },
+      "development_fixture_rows": 256,
+      "features": [
+        "age",
+        "job",
+        "marital",
+        "education",
+        "default",
+        "housing",
+        "loan",
+        "previous",
+        "emp.var.rate",
+        "cons.price.idx",
+        "cons.conf.idx",
+        "euribor3m",
+        "nr.employed",
+        "recency_available",
+        "recency_days"
+      ],
+      "group": "Full",
+      "mean_CV_AP_selection_only": 0.4480688918206422,
+      "model": "HistGradientBoosting",
+      "preprocessing_configuration": {
+        "adapter": "exact Phase 6A subset_preprocessor",
+        "factory": "decision_tree",
+        "numeric_scaling": "unscaled",
+        "ohe": "full, drop=None, handle_unknown=ignore, dense float64",
+        "recency": "unscaled recency pair"
+      },
+      "preprocessing_sha256": "3959b4db9a561be5bf7373dfcf82ab85c24a288250e26180599a403b7e551ed8",
+      "preprocessing_statistics": {
+        "categories": [
+          [
+            "admin.",
+            "blue-collar",
+            "entrepreneur",
+            "housemaid",
+            "management",
+            "retired",
+            "self-employed",
+            "services",
+            "student",
+            "technician",
+            "unemployed",
+            "unknown"
+          ],
+          [
+            "divorced",
+            "married",
+            "single",
+            "unknown"
+          ],
+          [
+            "basic.4y",
+            "basic.6y",
+            "basic.9y",
+            "high.school",
+            "illiterate",
+            "professional.course",
+            "university.degree",
+            "unknown"
+          ],
+          [
+            "no",
+            "unknown",
+            "yes"
+          ],
+          [
+            "no",
+            "unknown",
+            "yes"
+          ],
+          [
+            "no",
+            "unknown",
+            "yes"
+          ]
+        ],
+        "feature_names": [
+          "categorical__job_admin.",
+          "categorical__job_blue-collar",
+          "categorical__job_entrepreneur",
+          "categorical__job_housemaid",
+          "categorical__job_management",
+          "categorical__job_retired",
+          "categorical__job_self-employed",
+          "categorical__job_services",
+          "categorical__job_student",
+          "categorical__job_technician",
+          "categorical__job_unemployed",
+          "categorical__job_unknown",
+          "categorical__marital_divorced",
+          "categorical__marital_married",
+          "categorical__marital_single",
+          "categorical__marital_unknown",
+          "categorical__education_basic.4y",
+          "categorical__education_basic.6y",
+          "categorical__education_basic.9y",
+          "categorical__education_high.school",
+          "categorical__education_illiterate",
+          "categorical__education_professional.course",
+          "categorical__education_university.degree",
+          "categorical__education_unknown",
+          "categorical__default_no",
+          "categorical__default_unknown",
+          "categorical__default_yes",
+          "categorical__housing_no",
+          "categorical__housing_unknown",
+          "categorical__housing_yes",
+          "categorical__loan_no",
+          "categorical__loan_unknown",
+          "categorical__loan_yes",
+          "numerical__age",
+          "numerical__previous",
+          "numerical__emp.var.rate",
+          "numerical__cons.price.idx",
+          "numerical__cons.conf.idx",
+          "numerical__euribor3m",
+          "numerical__nr.employed",
+          "recency__recency_days",
+          "recency__recency_available"
+        ]
+      },
+      "random_state": 42,
+      "reload_identical_probabilities": true,
+      "role": "Sole Primary",
+      "scenario": "P1",
+      "seconds": 100.5910318819997,
+      "selected_parameters": {
+        "classifier__l2_regularization": 1.0,
+        "classifier__learning_rate": 0.05,
+        "classifier__max_iter": 200,
+        "classifier__max_leaf_nodes": 15
+      },
+      "training_rows": 32940,
+      "training_sha256": "c1a19ca755279a5f22ba22e06b8d5ca22797d9b6351c69fe4cfafd2b47041d49"
+    },
+    "S1": {
+      "artifact": "models/S1_pipeline.joblib",
+      "artifact_sha256": "5b2bf7ade8179b227b544e8fe7071e6bd79d7191c6cc1f8de89d232197de1a66",
+      "classes": [
+        0,
+        1
+      ],
+      "classifier_configuration": {
+        "categorical_features": null,
+        "class_weight": null,
+        "early_stopping": false,
+        "interaction_cst": null,
+        "l2_regularization": 0.0,
+        "learning_rate": 0.05,
+        "loss": "log_loss",
+        "max_bins": 255,
+        "max_depth": null,
+        "max_features": 1.0,
+        "max_iter": 100,
+        "max_leaf_nodes": 15,
+        "min_samples_leaf": 20,
+        "monotonic_cst": null,
+        "n_iter_no_change": 10,
+        "random_state": 42,
+        "scoring": "loss",
+        "tol": 1e-07,
+        "validation_fraction": 0.1,
+        "verbose": 0,
+        "warm_start": false
+      },
+      "development_fixture_rows": 256,
+      "features": [
+        "age",
+        "job",
+        "marital",
+        "education",
+        "default",
+        "housing",
+        "loan"
+      ],
+      "group": "Customer Attributes Only",
+      "mean_CV_AP_selection_only": 0.2337850183721019,
+      "model": "HistGradientBoosting",
+      "preprocessing_configuration": {
+        "adapter": "exact Phase 6A subset_preprocessor",
+        "factory": "decision_tree",
+        "numeric_scaling": "unscaled",
+        "ohe": "full, drop=None, handle_unknown=ignore, dense float64",
+        "recency": "component completely removed"
+      },
+      "preprocessing_sha256": "3959b4db9a561be5bf7373dfcf82ab85c24a288250e26180599a403b7e551ed8",
+      "preprocessing_statistics": {
+        "categories": [
+          [
+            "admin.",
+            "blue-collar",
+            "entrepreneur",
+            "housemaid",
+            "management",
+            "retired",
+            "self-employed",
+            "services",
+            "student",
+            "technician",
+            "unemployed",
+            "unknown"
+          ],
+          [
+            "divorced",
+            "married",
+            "single",
+            "unknown"
+          ],
+          [
+            "basic.4y",
+            "basic.6y",
+            "basic.9y",
+            "high.school",
+            "illiterate",
+            "professional.course",
+            "university.degree",
+            "unknown"
+          ],
+          [
+            "no",
+            "unknown",
+            "yes"
+          ],
+          [
+            "no",
+            "unknown",
+            "yes"
+          ],
+          [
+            "no",
+            "unknown",
+            "yes"
+          ]
+        ],
+        "feature_names": [
+          "categorical__job_admin.",
+          "categorical__job_blue-collar",
+          "categorical__job_entrepreneur",
+          "categorical__job_housemaid",
+          "categorical__job_management",
+          "categorical__job_retired",
+          "categorical__job_self-employed",
+          "categorical__job_services",
+          "categorical__job_student",
+          "categorical__job_technician",
+          "categorical__job_unemployed",
+          "categorical__job_unknown",
+          "categorical__marital_divorced",
+          "categorical__marital_married",
+          "categorical__marital_single",
+          "categorical__marital_unknown",
+          "categorical__education_basic.4y",
+          "categorical__education_basic.6y",
+          "categorical__education_basic.9y",
+          "categorical__education_high.school",
+          "categorical__education_illiterate",
+          "categorical__education_professional.course",
+          "categorical__education_university.degree",
+          "categorical__education_unknown",
+          "categorical__default_no",
+          "categorical__default_unknown",
+          "categorical__default_yes",
+          "categorical__housing_no",
+          "categorical__housing_unknown",
+          "categorical__housing_yes",
+          "categorical__loan_no",
+          "categorical__loan_unknown",
+          "categorical__loan_yes",
+          "numerical__age"
+        ]
+      },
+      "random_state": 42,
+      "reload_identical_probabilities": true,
+      "role": "Secondary Sensitivity",
+      "scenario": "S1",
+      "seconds": 85.35514575000025,
+      "selected_parameters": {
+        "classifier__l2_regularization": 0.0,
+        "classifier__learning_rate": 0.05,
+        "classifier__max_iter": 100,
+        "classifier__max_leaf_nodes": 15
+      },
+      "training_rows": 32940,
+      "training_sha256": "c1a19ca755279a5f22ba22e06b8d5ca22797d9b6351c69fe4cfafd2b47041d49"
+    }
+  },
+  "source_main": "9578ebc",
+  "sources": {
+    "02_cleaned_dataset.csv": "c1a19ca755279a5f22ba22e06b8d5ca22797d9b6351c69fe4cfafd2b47041d49",
+    "03_split_indices.json": "397e6e9c66ba3b6b5f6bef6232e00dc392c9ae9d77fdfda28a2d7dc02693596b",
+    "06_nested_cv_targeting_summary.md": "d9e58462856baf3362e18e7bc4fcaf56d0ddb5db5656f5d7b867b2f6dca642c2",
+    "07_threshold_decision_summary.md": "2756204930ef61d624fe80078e51a469db937f10e0678963d708fda52c3b2c2a",
+    "08_imbalance_treatment_summary.md": "ecdf9a78178a59ecb8ddbc058b5a02d1be3c590f15111c071124d97bde8a1d51",
+    "09_feature_ablation.ipynb": "b753760b1f329cb89882e872a2c594e4606e8db61335ff2fa8212c1f56f9e662",
+    "09_feature_ablation_summary.md": "b396bd3df7226d9bbe233968e1eecf0f89825065d133366796dca2d5b101fe1f",
+    "10_feature_availability_matrix.md": "189a629ffe2623d122228f3c564ccbf25db5c070bb0fec5823b4e8987d733053",
+    "10_final_model_selection_plan.md": "5f8784b666baa8e15536f36774d28399c71569be0516752ecbf3ec2ab5a65997",
+    "dataset.csv": "81fd5eb4b659dddbc704edd90376c32714c3f6a43b887cb686762903bc793f0d",
+    "preprocessing.py": "3959b4db9a561be5bf7373dfcf82ab85c24a288250e26180599a403b7e551ed8"
+  },
+  "training_row_count": 32940,
+  "training_seconds": 189.76489468299997,
+  "unit_tests": "4 passed",
+  "versions": {
+    "joblib": "1.5.3",
+    "numpy": "2.3.5",
+    "pandas": "2.2.3",
+    "python": "3.12.14",
+    "scipy": "1.17.0",
+    "sklearn": "1.8.0"
+  }
+}

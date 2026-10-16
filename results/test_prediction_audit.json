@@ -1,0 +1,14 @@
+{
+  "all_four_vectors_completed_before_any_score": true,
+  "gate_preceded_parse": true,
+  "model_warnings": [],
+  "no_test_fit_calls": true,
+  "predict_proba_calls": {
+    "B1": 1,
+    "B2": 1,
+    "P1": 1,
+    "S1": 1
+  },
+  "predictions_sha256": "bc1e1163db21fae70c0b38ccaf77347b28de8487b2b71d64f17112069810f9d3",
+  "test_parser_invocations": 1
+}

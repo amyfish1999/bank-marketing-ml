@@ -1,0 +1,67 @@
+{
+  "checks": [
+    {
+      "requirement": "194 development-only fits / 190 CV +4 final refits",
+      "status": "PASS"
+    },
+    {
+      "requirement": "Exact four scenarios/roles and fixed parameter choices recorded",
+      "status": "PASS"
+    },
+    {
+      "requirement": "Exact ordered full/customer input schemas",
+      "status": "PASS"
+    },
+    {
+      "requirement": "Fitting-only OHE/ordinary/conditional statistics audited",
+      "status": "PASS"
+    },
+    {
+      "requirement": "Approved conditional recency, placeholder and unscaled indicator behavior",
+      "status": "PASS"
+    },
+    {
+      "requirement": "Customer-only recency components fully removed",
+      "status": "PASS"
+    },
+    {
+      "requirement": "Finite probabilities and correct [0,1] mapping",
+      "status": "PASS"
+    },
+    {
+      "requirement": "Four trusted serialized pipelines reload identically",
+      "status": "PASS"
+    },
+    {
+      "requirement": "All sources, split, code and model digests unchanged",
+      "status": "PASS"
+    },
+    {
+      "requirement": "Roster P1 sole primary / S1 B1 B2 secondary unchanged",
+      "status": "PASS"
+    },
+    {
+      "requirement": "Metrics/capacities/ties/2,000 paired-stratified bootstrap frozen",
+      "status": "PASS"
+    },
+    {
+      "requirement": "No unexpected warnings/errors and all four preprocessing tests pass",
+      "status": "PASS"
+    },
+    {
+      "requirement": "Explicit user authorization and academic-only interpretation recorded",
+      "status": "PASS"
+    },
+    {
+      "requirement": "No test parse/profile/transform/prediction/evaluation before this gate",
+      "status": "PASS"
+    }
+  ],
+  "execution_code_sha256": "eb82e4b5d6cfde38df114adde5ba3702e2fda70786cf9f1ea72abdec7293764e",
+  "gate_document_sha256": "b12f5252aef6794c635a041506a01ae388b141e9f91973afb612d155bb07ba89",
+  "manifest_sha256": "84aad6db0ad97b619fdf27c4e6fccdef3263ac65c178ca4f9898a0b0b773d96a",
+  "protocol_sha256": "77dc25ff60e8408ffd53aff04378cc0df4293dae847f3c263acfce93cf982dfd",
+  "saved_at_utc": "2026-10-16T01:52:21.438245+00:00",
+  "status": "PASS",
+  "test_accesses_before_gate": 0
+}

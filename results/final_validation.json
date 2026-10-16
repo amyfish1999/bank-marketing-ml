@@ -1,0 +1,41 @@
+{
+  "CV_fits": 190,
+  "code_sha256": "eb82e4b5d6cfde38df114adde5ba3702e2fda70786cf9f1ea72abdec7293764e",
+  "evaluation_complete_sha256": "1942e89be766286b6b108acb2383b5326e318e9023d509ec573045a1cd60284f",
+  "final_development_refits": 4,
+  "gate_saved_before_test_parser": true,
+  "gate_sha256": "b12f5252aef6794c635a041506a01ae388b141e9f91973afb612d155bb07ba89",
+  "heldout_parser_invocations": 1,
+  "independent_point_metric_records": 4,
+  "independent_topk_records": 12,
+  "interpretation": "conditional historical academic; P1 sole primary; all 15 features Provisional",
+  "intervals_recomputed": 108,
+  "manifest_sha256": "84aad6db0ad97b619fdf27c4e6fccdef3263ac65c178ca4f9898a0b0b773d96a",
+  "new_model_fits_or_predictions_in_verification": 0,
+  "notebook_sha256": "335a19bd8bbc6e3bdaa699b8547efe49faaa158a52289ed11c6e11053de397a6",
+  "original_tracked_artifacts_unchanged": true,
+  "paired_draw_digests_verified": 2000,
+  "release_gate_checks": 14,
+  "safe_replay": {
+    "all_eight_cells_passed": true,
+    "blocked": [
+      "model_fit",
+      "model_predict_proba",
+      "preprocessing_transform",
+      "joblib_load",
+      "raw_CSV_parse"
+    ],
+    "models_results_gate_notebook_unchanged_during_replay": true,
+    "summary_byte_identical": true
+  },
+  "source_main": "9578ebc",
+  "status": "PASS",
+  "summary_sha256": "9eaee1215ef0584eadf166a80c9642f9cf05eadcd1d48da67fad5f949434d3ee",
+  "test_predict_proba_calls": {
+    "B1": 1,
+    "B2": 1,
+    "P1": 1,
+    "S1": 1
+  },
+  "verified_at_utc": "2026-10-16T01:55:55.333035+00:00"
+}

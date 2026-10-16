@@ -1,0 +1,177 @@
+{
+  "code_sha256": "eb82e4b5d6cfde38df114adde5ba3702e2fda70786cf9f1ea72abdec7293764e",
+  "fold_sha256": "6016ca88c4c344724075ade804828d47f03a69bf7337f5287cee0f4a444457c4",
+  "grids": {
+    "HistGradientBoosting": {
+      "classifier__l2_regularization": [
+        0.0,
+        1.0
+      ],
+      "classifier__learning_rate": [
+        0.05,
+        0.1
+      ],
+      "classifier__max_iter": [
+        100,
+        200
+      ],
+      "classifier__max_leaf_nodes": [
+        15,
+        31
+      ]
+    },
+    "LogisticRegression": {
+      "classifier__C": [
+        0.1,
+        1.0,
+        10.0
+      ]
+    }
+  },
+  "rules": {
+    "academic_only": true,
+    "all_15_features": "Provisional",
+    "authorization": "User Phase 7 instruction explicitly approves historical academic evaluation of P1/S1/B1/B2, locked capacities/metrics/bootstrap, and automatic Stage 2 continuation after PASS.",
+    "bootstrap": {
+      "paired": true,
+      "percentiles": [
+        2.5,
+        97.5
+      ],
+      "quantile_method": "linear",
+      "replicates": 2000,
+      "rng": "NumPy default_rng / PCG64",
+      "seed": 42,
+      "stratified": true
+    },
+    "calibration": null,
+    "capacities": [
+      0.05,
+      0.1,
+      0.2
+    ],
+    "class_weight": null,
+    "classification_threshold": 0.5,
+    "contact_counts": [
+      412,
+      824,
+      1648
+    ],
+    "cv": {
+      "n_splits": 5,
+      "random_state": 42,
+      "shuffle": true
+    },
+    "positive_class": 1,
+    "primary_capacity": 0.1,
+    "primary_metric": "AP",
+    "primary_scenario": "P1",
+    "ranking_ties": "descending probability; ascending immutable cleaned-row position; bootstrap duplicate draw-occurrence last",
+    "resampling": null,
+    "scenario_order": [
+      "P1",
+      "S1",
+      "B1",
+      "B2"
+    ],
+    "secondary_metric": "ROC_AUC",
+    "selection": "maximum mean five-fold positive-predict_proba AP; exact ties first ParameterGrid candidate",
+    "threshold_selection": null
+  },
+  "scenarios": {
+    "B1": {
+      "features": [
+        "age",
+        "job",
+        "marital",
+        "education",
+        "default",
+        "housing",
+        "loan",
+        "previous",
+        "emp.var.rate",
+        "cons.price.idx",
+        "cons.conf.idx",
+        "euribor3m",
+        "nr.employed",
+        "recency_available",
+        "recency_days"
+      ],
+      "group": "Full",
+      "model": "LogisticRegression",
+      "role": "Secondary Benchmark"
+    },
+    "B2": {
+      "features": [
+        "age",
+        "job",
+        "marital",
+        "education",
+        "default",
+        "housing",
+        "loan"
+      ],
+      "group": "Customer Attributes Only",
+      "model": "LogisticRegression",
+      "role": "Secondary Benchmark"
+    },
+    "P1": {
+      "features": [
+        "age",
+        "job",
+        "marital",
+        "education",
+        "default",
+        "housing",
+        "loan",
+        "previous",
+        "emp.var.rate",
+        "cons.price.idx",
+        "cons.conf.idx",
+        "euribor3m",
+        "nr.employed",
+        "recency_available",
+        "recency_days"
+      ],
+      "group": "Full",
+      "model": "HistGradientBoosting",
+      "role": "Sole Primary"
+    },
+    "S1": {
+      "features": [
+        "age",
+        "job",
+        "marital",
+        "education",
+        "default",
+        "housing",
+        "loan"
+      ],
+      "group": "Customer Attributes Only",
+      "model": "HistGradientBoosting",
+      "role": "Secondary Sensitivity"
+    }
+  },
+  "source_main": "9578ebc",
+  "sources": {
+    "02_cleaned_dataset.csv": "c1a19ca755279a5f22ba22e06b8d5ca22797d9b6351c69fe4cfafd2b47041d49",
+    "03_split_indices.json": "397e6e9c66ba3b6b5f6bef6232e00dc392c9ae9d77fdfda28a2d7dc02693596b",
+    "06_nested_cv_targeting_summary.md": "d9e58462856baf3362e18e7bc4fcaf56d0ddb5db5656f5d7b867b2f6dca642c2",
+    "07_threshold_decision_summary.md": "2756204930ef61d624fe80078e51a469db937f10e0678963d708fda52c3b2c2a",
+    "08_imbalance_treatment_summary.md": "ecdf9a78178a59ecb8ddbc058b5a02d1be3c590f15111c071124d97bde8a1d51",
+    "09_feature_ablation.ipynb": "b753760b1f329cb89882e872a2c594e4606e8db61335ff2fa8212c1f56f9e662",
+    "09_feature_ablation_summary.md": "b396bd3df7226d9bbe233968e1eecf0f89825065d133366796dca2d5b101fe1f",
+    "10_feature_availability_matrix.md": "189a629ffe2623d122228f3c564ccbf25db5c070bb0fec5823b4e8987d733053",
+    "10_final_model_selection_plan.md": "5f8784b666baa8e15536f36774d28399c71569be0516752ecbf3ec2ab5a65997",
+    "dataset.csv": "81fd5eb4b659dddbc704edd90376c32714c3f6a43b887cb686762903bc793f0d",
+    "preprocessing.py": "3959b4db9a561be5bf7373dfcf82ab85c24a288250e26180599a403b7e551ed8"
+  },
+  "versions": {
+    "joblib": "1.5.3",
+    "numpy": "2.3.5",
+    "pandas": "2.2.3",
+    "python": "3.12.14",
+    "scipy": "1.17.0",
+    "sklearn": "1.8.0"
+  }
+}
