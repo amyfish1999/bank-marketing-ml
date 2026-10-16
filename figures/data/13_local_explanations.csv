@@ -1,0 +1,4 @@
+example,cleaned_row_position,predicted_probability,base_log_odds,sum_contributions_log_odds,reconstructed_probability,leading_signed_contributions
+high,40181,0.8598509770554104,-2.503823876111599,4.317876661761557,0.8598509770554105,nr.employed: +2.1633; recency_available: +0.5566; emp.var.rate: +0.5145; recency_days: +0.4189; euribor3m: +0.2334
+medium,18081,0.05708653846131407,-2.503823876111599,-0.3005822978733242,0.05708653846131393,emp.var.rate: -0.4434; euribor3m: +0.2317; nr.employed: -0.1661; cons.price.idx: +0.0845; age: +0.0440
+low,1415,0.015950066209914335,-2.503823876111599,-1.6183897850607234,0.01595006620991428,emp.var.rate: -0.4452; nr.employed: -0.3898; loan: -0.2464; education: -0.2226; cons.price.idx: -0.1377
